@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <img src="http://s-group.in.ua/yalta/public/img/logo1.png" width="130" height="115" alt="Ялта"><br/>
 Исходник проекта сайта-путеводителя http://crimea-guide.in.ua/public/.
 Проект находится на стадии разработки.В ближайшем времени проект будет запущен и протестирован.<br/>
@@ -56,13 +55,3 @@
        </ul>
 
 </ul>
-=======
-iKrym
-=====
-
-s-group.in.ua/yalta
->>>>>>> 0ba7f6ff840956f6abb0e4600cef261e8c578876
-=======
-iKrym
-=====
->>>>>>> remotes/alfared/master
