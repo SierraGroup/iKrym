@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+            <button class="btn btn-primary btn-large"><i class="icon-white icon-arrow-left"></i> <a style="text-decoration: none; cursor:pointer;color: white;" href="<? echo $this->url('zfcadmin');?>">Назад в Админ.Панель</a></button>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span8">
+            <!--Body content-->
+            <h4>Гостиницы</h4>
+            <table class="table table-bordered">
+                <thead>
+                        <tr>
+
+                            <th>Имя гостиницы</th>
+                            <th>Описание гостиницы</th>
+                            <th>Рисунок гостиницы</th>
+                            <th>Описания гостиницы</th>
+                            <th>Количевство звезд у гостиницы</th>
+                            <th>Возможности гостиницы</th>
+                            <th>Сайт</th>
+                            <th>Адресс</th>
+                            <th>Телефон</th>
+                            <th>Рабочее время</th>
+                        </tr>
+                </thead>
+                <tbody>
+                <?php foreach($hostels as $hostel): ?>
+                    <tr>
+                        <td><? echo $hostel->hostel_name_route; ?></td>
+                        <td><? echo $hostel->hostel_name; ?></td>
+                        <td> <img width="450" height="100" class="main-image" src="<?php echo  $this->basePath() . substr($hostel->hostel_image,8); ?>" /></td>
+                        <td><? echo substr($hostel->hostel_description,0,50)."..."; ?></td>
+                        <td><? echo $hostel->hostel_start_count; ?></td>
+                        <td><? echo $hostel->hostel_features; ?></td>
+                        <td><? echo $hostel->hostel_site; ?></td>
+                        <td><? echo $hostel->hostel_address; ?></td>
+                        <td><? echo $hostel->hostel_telephone; ?></td>
+                        <td><? echo $hostel->hostel_work_time; ?></td>
+                   </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <!--Body content-->
+            <a class="btn btn-primary" href="<?php echo $this->url('zfcadmin/hostels/add');?>">Добавить гостиницу</a>
+        </div>
+
+    </div>
+</div>

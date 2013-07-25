@@ -1,0 +1,24 @@
+{
+    "reservation_tables":[
+        {
+            "name_reservation_table":"Василий",
+            "peoples_reservation_table":"Peoples1",
+            "telephone_reservation_table":"Telephone1"
+        },
+        {
+            "name_reservation_table":"Михаил",
+            "peoples_reservation_table":"Peoples1",
+            "telephone_reservation_table":"Telephone1"
+        },
+        {
+            "name_reservation_table":"Анатолий",
+            "peoples_reservation_table":"Peoples3",
+            "telephone_reservation_table":"Telephone3"
+        },
+        {
+            "name_reservation_table":"Святослав",
+            "peoples_reservation_table":"Peoples4",
+            "telephone_reservation_table":"Telephone4"
+        }
+    ]
+}

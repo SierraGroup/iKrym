@@ -1,0 +1,41 @@
+<?php echo $topline; ?>
+<?php echo $topview; ?>
+<div class="container-fluid">
+    <div class="attraction_main">
+        <h1>Раздел достопримечательности</h1>
+    </div>
+    <?php echo $navigation; ?>
+    <div class="row-fluid attraction">
+        <div class="attraction_header">
+            <h1><?php echo $attraction->attraction_name; ?></h1>
+        </div>
+        <div class="span3">
+
+            <!-- http://twitter.github.io/bootstrap/javascript.html#carousel-->
+            <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                        <?php
+                        $additional_images = explode(" ",$attraction->attraction_additional_photos);
+                        $count_additional_images  = count($additional_images);
+                        for($i =0; $i< $count_additional_images; $i++){ ?>
+                                    <div class="item">
+                                            <img src="<?php echo $this->basePath(). $additional_images[$i]; ?>" />
+                                            <div class="carousel-caption">
+                                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                            </div>
+                                    </div>
+                        <?
+                        }
+                        ?>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            </div>
+        </div>
+    </div>
+</div>

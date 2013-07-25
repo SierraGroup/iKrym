@@ -1,0 +1,43 @@
+<div class="right-side">
+    <h3 style="font-family: 'asenine_cyrillicregular'; text-align:right; font-size: 18px; color: #009999; font-weight:normal;">Добро пожаловать! <a href="<?php echo  $this->url('zfcuser/profile'); ?>"><?php echo $this->zfcUserDisplayName(); ?></a>  <?php if($this->zfcUserDisplayName()){ ?><a href="<?php echo  $this->url('zfcuser/logout'); ?>">Выйти</a><?php } ?></h3>
+    <div class="favorites">
+        <div class="favorites_city"><a>Ялта</a></div>
+        <div class="favorites_favorites"><a>Избранное</a></div>
+
+    </div>
+
+    <div class="right-side-search">
+        <a id="location" onclick="Geo.getPosition(function(){document.location.reload()}, {update: true}); return false;" style="font-family: 'asenine_cyrillicregular';position: relative;left: 28%;cursor: pointer;text-decoration: none">Указать свое местоположение</a>
+        <form class="form-search ">
+            <input type="text" value="поиск" class="input-medium search-query" style="height:21px; width: 125px; border: none; -webkit-border-top-left-radius: 15px;
+-webkit-border-bottom-left-radius: 15px;
+-moz-border-radius-topleft: 15px;
+-moz-border-radius-bottomleft: 15px;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+
+-webkit-border-top-right-radius: 0px;
+-webkit-border-bottom-right-radius: 0px;
+-moz-border-radius-topright: 0px;
+-moz-border-radius-bottomright: 0px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px; left: 102px;
+">
+            <button type="submit" class="btn">Поиск</button>
+        </form>
+    </div>
+
+</div>
+<style>
+    .form-search input{
+        position: relative;
+        width: 51%;
+        height: 4%;
+        right: 15%;
+    }
+    .form-search button{
+        position: relative;
+        right: 13%;
+    }
+</style>
+

@@ -1,0 +1,116 @@
+<?php echo $topview; ?>
+<?php echo $navigation; ?>
+<div class="row-fluid" style=" width:1020px;">
+    <div class="span77" style=" margin-top: -50px;">
+        <div class="table">
+            <div class="span6">
+                  <h1><? echo $attraction->attraction_name; ?></h1>
+            </div>
+                <div class="table-row-star span6"></div>
+            <div class="span6 table-row-map">
+                <? echo $this->map; ?>
+            </div>
+
+                <div class="table_main_image">
+                     <img class="img-polaroid" width="200" height="200" src="<? echo $this->basePath() . '/' . substr($attraction->attraction_main_photo,7)?>">
+                </div>
+
+
+                      <table class="table_detailed_information">
+                          <tr>
+                              <td><a>Тип:   <span><? echo $attraction->attraction_type; ?></span></a></td>
+                          </tr>
+                          <tr>
+                              <td><a>Время работы:   <span><? echo $attraction->attraction_time_work; ?></span></a></td>
+                          </tr>
+
+                          <tr>
+                              <td><a>Вход:   <span><? echo $attraction->attraction_ticket_price; ?> грн</span></a></td>
+                          </tr>
+                          <tr>
+                              <td><a>Растояние:   <span class="distance"> км</span></a></td>
+                          </tr>
+                      </table>
+
+
+        </div>
+
+    </div>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="app-store-button" target="_blank">App Store</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="google-paly-button" target="_blank">Google Play</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="facebook-button" target="_blank">Facebook</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="vkontakte-button" target="_blank">Vkontakte</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="twitter-button" target="_blank">Twitter</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="registration-button" target="_blank">Registration</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="login-button" target="_blank">Login</a>
+</div>
+<div class="footer">
+    <div class="infoot">
+    </div>
+</div>
+<style>
+    .table h1{
+        font-family: 'asenine_cyrillicregular';
+        font-size: 30px;
+    }
+    .table_detailed_information{
+        position: relative;
+        box-sizing: border-box;
+        left: 69%;
+    }
+    .table_detailed_information td{
+        text-align: right;
+        font-family: glametrixbold;
+        font-size: 20px;
+        color: #000000;
+        text-decoration: none;
+    }
+    .row-fluid .span8{
+        margin-top: 16%;
+    }
+    .table_main_image {
+        width: 30%;
+        position: relative;
+        left: 67%;
+    }
+    .table_map{
+        position: relative;
+        height: 250px !important;
+        left: 39%;
+    }
+    .table-row-map{
+        position: relative;
+        margin-top: 4%;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+
+            $('.table-row-star').raty().css({'position':'relative','left':'41%'});
+            $.ajax({
+                url:"http://s-group.in.ua/yalta/json/get/attraction/attraction_feature.php",
+                type:"GET",
+                success:function(result){
+
+                    console.log(result);
+                }
+
+            });
+
+    });
+</script>

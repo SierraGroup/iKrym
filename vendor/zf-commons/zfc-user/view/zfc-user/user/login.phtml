@@ -1,0 +1,40 @@
+<div class="span2 logo_admin_menu">
+    <a href="<?php echo $this->url('home');?>">
+        <img src="http://s-group.in.ua/yalta/img/logo1.png" width="130" height="115" alt="Ялта">
+    </a>
+</div>
+<div class="login_user">
+    <h1>Зайдите на наш сайт</h1>
+            <?php
+                    $form = $this->loginForm;
+                    $form->prepare();
+                    $form->setAttribute('action', $this->url('zfcuser/login'));
+                    $form->setAttribute('method', 'post');
+
+            ?>
+
+            <?php echo $this->form()->openTag($form) ?>
+
+                <dl class="zend_form">
+                    <?php echo $this->formElementErrors($form->get('identity')) ?>
+
+                    <dt><?php echo $this->formLabel($form->get('identity')) ?></dt>
+                    <dd><?php echo $this->formInput($form->get('identity')) ?></dd>
+
+                    <dt><?php echo $this->formLabel($form->get('credential')) ?></dt>
+                    <dd><?php echo $this->formInput($form->get('credential')) ?></dd>
+
+                    <?php if ($this->redirect): ?>
+                        <input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
+                    <?php endif ?>
+
+                    <dd><?php echo $this->formButton($form->get('submit')) ?></dd>
+                </dl>
+
+            <?php echo $this->form()->closeTag() ?>
+
+            <?php if ($this->enableRegistration) : ?>
+            Или пройдите <a href="<?php echo $this->url('zfcuser/register') . ($this->redirect ? '?redirect='.$this->redirect : '') ?>">регистрацию!</a>
+            <?php endif; ?>
+
+</div>

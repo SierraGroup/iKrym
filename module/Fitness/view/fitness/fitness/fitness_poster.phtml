@@ -1,0 +1,80 @@
+<?php echo $topline; ?>
+<?php echo $topview; ?>
+    <div class="container-fluid">
+        <div class="attraction_main">
+            <h1>Раздел достопримечательности</h1>
+        </div>
+                <?php echo $navigation; ?>
+        <div class="row-fluid attraction">
+
+            <div class="attraction_header">
+                <h1><?php echo $attraction->attraction_name; ?></h1>
+            </div>
+            <div class="span3 attraction_main_image">
+                <img width="300" src="<?php echo $this->basePath() . $attraction->attraction_main_photo; ?>" class="img-polaroid">
+                <?php
+                $additional_images = explode(" ",$attraction->attraction_additional_photos);
+                $count_additional_images  = count($additional_images);
+                //                echo  $attraction->attraction_additional_photos;
+                //                echo $count_additional_images;
+                //                echo $additional_images[0];
+                for($i =0; $i< $count_additional_images; $i++){ ?>
+                    <img width="90" src="<?php echo $this->basePath(). $additional_images[$i]; ?>" class="img-polaroid">
+                <?
+                }
+                ?>
+                <button class="button_to_favorites" id="green">
+                    В Избранное
+                </button><br/>
+
+            </div>
+            <div class="span3 attraction_information">
+                <?php echo $detailed_information; ?>
+            </div>
+            <div class="span4 attraction_map img-polaroid">
+                <!-- google maps block -->
+                <?php echo $map_attraction; ?>
+                <!-- /google maps block -->
+            </div>
+
+            <div class="span4 attraction_other_objects">
+                <ul class="grid_attraction cs-style-2">
+                    <h3>Обьекты рядом</h3>
+                    <?php
+                    $current_attraction = $attraction->attraction_name;
+                    foreach($attractions as $attraction) :
+                        if($current_attraction == $attraction->attraction_name) { continue; }
+                        else
+                        { ?>
+                            <li>
+                                <figure>
+                                    <img width="400" height="100" class="main-image" src="<?php echo $this->basePath(). $this->escapeHtml($attraction->attraction_main_photo);?>"/>
+                                    <figcaption>
+                                        <a href="<?php echo $this->url('attraction',
+                                            array('action'=>'attraction', 'attraction_id_name' => $attraction->attraction_id_name));?>"><?php echo $this->escapeHtml($attraction->attraction_name); ?></a><br/>
+                                             <span><b>Адресc:</b>   <span><?php echo $this->escapeHtml($attraction->attraction_address); ?></span>
+                                                <button class="button button-attraction-1" id="green">
+                                                    Проложить маршрут
+                                                </button><br/>
+                                                 <button class="button button-attraction-1" id="red" onclick="">
+                                                     Добавить в маршрут
+                                                 </button>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        <?php  }
+                    endforeach; ?>
+                </ul>
+            </div>
+            <div class="span6 attraction_poster_header">
+                 <h1>Афиша достопримечательности <?php echo $attraction->attraction_name; ?></h1>
+            </div>
+            <div class="span6 attraction_poster">
+
+                <h3> <?php echo $attraction_poster->attraction_poster_name; ?></h3>
+                <h3>Дата проведения: <?php echo $attraction_poster->attraction_poster_date; ?></h3>
+                <p> <?php echo $attraction_poster->attraction_poster_description; ?>></p>
+            </div>
+
+        </div>
+    </div>

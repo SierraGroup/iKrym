@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Yalta application\n"
+"POT-Creation-Date: 2013-07-10 18:31+0200\n"
+"PO-Revision-Date: 2013-07-10 18:31+0200\n"
+"Last-Translator: alfared <alfared3006@gmail.com>\n"
+"Language-Team: Sierra Group \"sierra-group.in.ua\" <alfared3006@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\yalta\\module\\Application\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: view/block/navigation.phtml:7
+msgid "About us"
+msgstr "Об нас"
+
+#: view/block/navigation.phtml:8
+msgid "Articles"
+msgstr "Статьи"
+
+#: view/block/navigation.phtml:9
+msgid "Advertisers"
+msgstr "Рекламодателям"
+
+#: view/block/navigation.phtml:10
+msgid "Tourists"
+msgstr "Туристам"
+
+#: view/block/rightside.phtml:2
+msgid "Hello!How are you?"
+msgstr "Привет!Как дела?"
+
+#: view/block/rightside.phtml:4
+#, fuzzy
+msgid "Yalta"
+msgstr "Ялта - информационный гид по городу Ялта"
+
+#: view/block/rightside.phtml:5
+msgid "Favorites"
+msgstr "Избранные"
+
+#: view/block/rightside.phtml:11
+msgid "Search"
+msgstr "Поиск"
+
+#: view/block/top.phtml:11 view/block/top.phtml:15
+msgid "Order by phone"
+msgstr "Звонок по телефону"
+
+#: view/block/top.phtml:19
+msgid "Convenience order"
+msgstr "Удобство заказа"
+
+#: view/block/top.phtml:20
+msgid "Toll-Free"
+msgstr "Абсолютно бесплатно"
+
+#: view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr "Вы пришли не к той странице"
+
+#: view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+"Запрашиваемый  контроллер не может быть отображен в существующем класе "
+"контроллера"
+
+#: view/error/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+"Запрашиваемый  контроллер не может быть отображен в существующем класе "
+"контроллера"
+
+#: view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr "Запрашиваемый контроллер не был затронутым"
+
+#: view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr "Запрашиваемый путь не был согласован с маршрутом"
+
+#: view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr "Мы не можем узнать почему возникает 404 ошибка"
+
+#: view/error/404.phtml:34
+msgid "Controller"
+msgstr "Контроллер"
+
+#: view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr "решено до %s процента"
+
+#: view/error/404.phtml:53 view/error/index.phtml:8
+msgid "Additional information"
+msgstr "Дополнительная информация"
+
+#: view/error/404.phtml:56 view/error/404.phtml:80 view/error/index.phtml:11
+#: view/error/index.phtml:35
+msgid "File"
+msgstr "Файл"
+
+#: view/error/404.phtml:60 view/error/404.phtml:84 view/error/index.phtml:15
+#: view/error/index.phtml:39
+msgid "Message"
+msgstr "Сообщение"
+
+#: view/error/404.phtml:64 view/error/404.phtml:88 view/error/index.phtml:19
+#: view/error/index.phtml:43
+msgid "Stack trace"
+msgstr "Трассировка стека"
+
+#: view/error/404.phtml:74 view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr "Прежние исключения"
+
+#: view/error/404.phtml:103 view/error/index.phtml:58
+msgid "No Exception available"
+msgstr "Нету поддерживаемых исключений"
+
+#: view/error/index.phtml:1
+msgid "An error occurred"
+msgstr "Возникшая ошибка"
+
+#: view/layout/layout.phtml:7
+msgid "Yalta guide"
+msgstr "Ялта - информационный гид по городу Ялта"

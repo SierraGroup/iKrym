@@ -1,0 +1,157 @@
+<?php echo $topview; ?>
+<?php echo $navigation; ?>
+<div class="row-fluid" style=" width:1020px;">
+
+    <!--<div class="span3 restaurant_category">-->
+
+    <?php /*?> <?php echo $category; ?><?php */?>
+
+    <!--</div>-->
+
+    <div class="span77" style=" margin-top: -50px;">
+        <div class="restaurant_grid" style=" float:left; ">
+            <h3 class="dostoprim">Рестораны</h3>
+            <p class="dostoprim">рядом с Вами...</p>
+            <!-- <div class="att-1">-->
+            <table width="720" border="0" style=" text-align:center;  padding-top: 25px; border-radius: 8px;  background-color: #f6f6f6; -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.2); -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.2); box-shadow: 5px 5px 10px rgba(0,0,0,0.2);">
+                <tr>
+                    <td>
+                        <ul class="grid_attraction cs-style-2" style="padding-bottom: 20px;">
+                            <?php foreach($restaurants as $restaurant) :?>
+                                <li>
+                                    <div style="width: 251px;  background-color: #fff; margin-top: 15px;">
+                                        <a style="margin-bottom: 20px; font-family: 'glametrixbold'; font-size:20px; color: #009999;" href="<?php echo $this->url('restaurant',
+
+                                            array('action'=>'restaurant', 'restaurant_id_name' => $restaurant->restaurant_id_name));?>"><?php echo $this->escapeHtml($restaurant->restaurant_name); ?></a>
+
+                                        <figure>
+
+                                            <img width="150" height="150" class="main-image img-pollaroid" src="<?php echo $this->basePath() . substr($restaurant->restaurant_thumbnail,7);?>"/>
+
+                                            <figcaption>
+                                                <br/>
+                                                <table width="238" border="0" style="margin-left: 5px; margin-top: -10px;">
+                                                    <tr>
+
+                                                        <td style="text-align: right;" valign="middle">
+
+
+
+
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" style="text-align:right;"><a style="color: #ec3b18; font-size: 15px; font-family: 'asenine_cyrillicregular'; padding-right: 2px;" href="#">добавить в избранное</a><img src="http://s-group.in.ua/yalta/img/izbrannoe1.png" /></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left; width: 110px;"><span style="color: #339999; font-family: 'glametrixregular'; font-size: 17px;">режим работы</span></td>
+                                                        <td style="text-align: right;"><span style="color: #000; font-family: 'glametrixregular'; font-size: 17px;"><?php echo $this->escapeHtml($restaurant->restaurant_work_time); ?></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left;"><span style="color: #339999; font-family: 'glametrixregular'; font-size: 17px;">Кухни</span></td>
+                                                        <td style="text-align: right;"><span style="color: #000; font-family: 'glametrixregular'; font-size: 17px;"><?php   $features = explode("," ,$restaurant->restaurant_features); echo strlen($restaurant->restaurant_features);?></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left;"><span style="color: #339999; font-family: 'glametrixregular'; font-size: 17px;">Средняя цена услуг</span></td>
+                                                        <td style="text-align: right;"><span style="color: #000; font-family: 'glametrixregular'; font-size: 17px;"><?php echo $this->escapeHtml($restaurant->restaurant_average_account); ?> грн</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left;"><button class="button button-attraction-1" id="green">Проложить маршрут</button></td>
+                                                        <td style="text-align: right;" valign="middle"><img src="http://s-group.in.ua/yalta/img/rasstoyanie1.png" /></td>
+                                                    </tr>
+                                                </table>
+
+
+
+                                                <br/>
+
+                                                <!--<button class="button button-restaurant-1" id="red" onclick="">
+
+                                                   Добавить в маршрут
+
+                                                </button>-->
+
+                                            </figcaption>
+
+                                        </figure>
+                                    </div>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <!--</div>-->
+        </div>
+        <div class="kalendar">
+            <div class="row">
+                <div class="g6">
+                    <!--<h2 class="h4">Новости достопримечательностей</h2>
+                    <p class="demoDesc">Последние новости из мира достопримечательностей города Ялты</p>-->
+                    <div id="eventCalendarHumanDate"></div>
+                    <script>
+                        $(document).ready(function() {
+                            $("#eventCalendarHumanDate").eventCalendar({
+                                eventsjson: 'http://s-group.in.ua/yalta/json/events.json',
+                                jsonDateFormat: 'human'  // 'YYYY-MM-DD HH:MM:SS'
+                            });
+                        });
+                    </script>
+                    <!--<pre>$(id).eventCalendar({
+                      eventsjson: 'events.json'
+                      jsonDateFormat: 'human'
+                    });</pre>-->
+                </div>
+            </div>
+        </div>
+        <h4>Афиша</h4>
+        <div class="span2 restaurant">
+            <ul class="nav nav-stacked" id="restaurants_poster_block_right">
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="app-store-button" target="_blank">App Store</a>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="google-paly-button" target="_blank">Google Play</a>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="facebook-button" target="_blank">Facebook</a>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="vkontakte-button" target="_blank">Vkontakte</a>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="twitter-button" target="_blank">Twitter</a>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="registration-button" target="_blank">Registration</a>
+</div>
+
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="login-button" target="_blank">Login</a>
+</div>
+<div class="footer">
+    <div class="infoot">
+
+
+    </div>
+
+</div>
+<style>
+    .span77 h4{
+        position: relative;
+        left:10%;
+        font-family: "glametrixbold";
+        font-size: 35px;
+    }
+</style>

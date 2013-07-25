@@ -1,0 +1,27 @@
+<div class="span2 logo_admin_menu">
+    <a href="<?php echo $this->url('home');?>">
+        <img src="http://s-group.in.ua/yalta/img/logo1.png" width="115" height="115" alt="Ялта">
+    </a>
+</div>
+<div class="login_user">
+                <h1>
+                    <?php if (\BjyAuthorize\Guard\Controller::ERROR === $error) : ?>
+                        Вы не имеете права доступа к этой странице
+
+
+                        <? /* php echo($controller);?>
+                        <?php if ($action) : ?>
+                        ::<?php echo($action);?>Action()
+                        <?php endif; */?>
+
+
+                    <?php elseif (\BjyAuthorize\Guard\Route::ERROR === $error)  : ?>
+                        Вы не имеете права доступа к <?php echo $route;?>.
+                    <?php elseif ($error == 'error-unauthorized') : ?>
+                        Или вы не авторизировались  <?php echo $reason; ?>.
+                    <?php else : ?>
+                        Возникла
+                    <?php endif;?>
+                </h1>
+                <h1>Вы должны войти <a href="<?php echo  $this->url('zfcuser/login'); ?>">как администратор</a></h1>
+    </div>

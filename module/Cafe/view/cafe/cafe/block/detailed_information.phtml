@@ -1,0 +1,20 @@
+<ul class="nav nav-tabs nav-stacked attraction_detailed_information">
+    <li>
+        <h4>Время работы</h4>
+        <a><?php echo $cafe->cafe_work_time; ?></a>
+        <h4>Средний счет</h4>
+        <a><?php echo $cafe->cafe_average_account; ?></a>
+        <h4>Направление кухни(музыки)</h4>
+        <a><?php echo $cafe->cafe_directions; ?></a>
+        <h4>Телефон</h4>
+        <a><?php echo $cafe->cafe_telephone; ?></a>
+        <h4>Адрес</h4>
+        <a><?php echo $cafe->cafe_address; ?></a>
+        <button  class="button button_attraction_detailed_information" id="green">
+            <a href="<?php echo $cafe->cafe_site; ?>" style="color: #ffffff;cursor: pointer;text-decoration: none">Перейти на сайт</a>
+        </button><br/>
+        <button class="button button_attraction_detailed_information" id="red" >
+            Проложить маршрут
+        </button>
+    </li>
+</ul>

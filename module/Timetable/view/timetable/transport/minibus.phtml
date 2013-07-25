@@ -1,0 +1,35 @@
+<!-- main blocks -->
+            <?php echo $topline; ?>
+            <?php echo $topview; ?>
+            <?php echo $navigation; ?>
+<!-- main blocks -->
+<div class="span10 transport_road_minibus">
+    <h1>Cписок всех маршруток города Ялта</h1>
+</div>
+<div class="span10 transport_road_minibus">
+
+        <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Маршрутка</th>
+                    <th>Количество маршруток на данный момент</th>
+                    <th>Время работы маршрутки в городе</th>
+                    <th>Cтоимость езды на маршрутке</th>
+                    <th>Количество стоячих мест</th>
+                    <th>Количество сидячих мест</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php  foreach($transport_road_minibus as $minibus) : ?>
+                        <tr>
+                            <td><?php echo $minibus->transport_road_minibus_model; ?></td>
+                            <td><?php echo $minibus->transport_road_minibus_сount; ?></td>
+                            <td><?php echo $minibus->transport_road_minibus_time_work; ?></td>
+                            <td><?php echo $minibus->transport_road_minibus_price; ?></td>
+                            <td><?php echo $minibus->transport_road_minibus_stand_up; ?></td>
+                            <td><?php echo $minibus->transport_road_minibus_seating; ?></td>
+                        </tr>
+                    <?php endforeach;  ?>
+                </tbody>
+</table>
+</div>

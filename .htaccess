@@ -1,0 +1,12 @@
+
+
+# If URL to the application is http://foo.com/path/to/ZendSkeletonApplication/
+# the set the base to /path/to/ZendSkeletonApplication/
+
+RewriteEngine On
+RewriteBase /yalta/
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

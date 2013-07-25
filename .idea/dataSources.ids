@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d8043b55-6726-4f64-9655-6dccdb60884e">
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://server8.hostinger.com.ua/u463638321_w</jdbc-url>
+    <default-dialect>MySQL</default-dialect>
+    <libraries>
+      <library>
+        <url>jar://C:/Program Files/MySQL/MySQL Server 5.5/mysql-connector-java-5.1.22-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://C:/Program Files/MySQL/MySQL Server 5.5/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

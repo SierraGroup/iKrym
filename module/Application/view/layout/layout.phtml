@@ -1,0 +1,43 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+<head>
+    <?php echo $this->headTitle('Yalta '. $this->translate('Yalta guide'))->setSeparator(' - ')->setAutoEscape(false); ?>
+    <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0'); ?>
+    <?php echo $this->headMeta()->setCharset('UTF-8'); ?>
+
+    <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+        ->prependStylesheet($this->basePath() . '/css/de_lovely.css')
+        ->prependStylesheet($this->basePath() . '/css/delovely_bootstrap.min.css')
+        ->prependStylesheet('http://fonts.googleapis.com/css?family=Noto+Serif&subset=latin,cyrillic')
+
+        ->prependStylesheet($this->basePath() . '/css/jquery-ui.css')
+        ->prependStylesheet($this->basePath() . '/css/admin.css')
+        ->prependStylesheet($this->basePath() . '/css/accordion.css')
+
+        ->prependStylesheet($this->basePath() . '/css/eventCalendar.css')
+        ->prependStylesheet($this->basePath() . '/css/jquery.fileupload-ui.css')
+        ->prependStylesheet($this->basePath() . '/css/plugins/magnific-popup.css');;
+
+//		->prependStylesheet($this->basePath() . '/css/egor.css')
+    ?>
+
+    <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+        ->prependFile($this->basePath()  . '/js/maps.js')
+        ->prependFile($this->basePath()  . '/js/plugins/jquery.magnific-popup.min.js')
+        ->prependFile($this->basePath()  . '/js/plugins/zepto.min.js')
+        ->prependFile($this->basePath()  . '/js/plugins/jquery.mixitup.js')
+        ->prependFile($this->basePath()  . '/js/plugins/jquery_raty/jquery.raty.js')
+        ->prependFile($this->basePath()  . '/js/jquery.eventCalendar.js')
+        ->prependFile($this->basePath()  . '/js/bootstrap.min.js')
+        ->prependFile($this->basePath()  . '/js/jquery-ui.js')
+        ->prependFile($this->basePath()  . '/js/jquery.min.js');
+    ?>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif&subset=cyrillic' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?keyAIzaSyDEVzUFc4ZibvdHfVMUiBzZUNqXQZgapuQ'=&sensor=false"></script>';
+
+</head>
+<body>
+<?php echo $this->content; ?>
+<?php echo $this->inlineScript() ?>
+</body>
+</html>

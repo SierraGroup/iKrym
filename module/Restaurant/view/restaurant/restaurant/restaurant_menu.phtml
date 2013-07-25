@@ -1,0 +1,36 @@
+<?php echo $topline; ?>
+<?php echo $topview; ?>
+<div class="container-fluid">
+    <div class="attraction_main">
+        <h1>Раздел рестораны</h1>
+    </div>
+    <?php echo $navigation; ?>
+
+    <div class="row-fluid attraction">
+
+        <div class="restaurant_header">
+            <h1><?php echo $restaurant->restaurant_name; ?></h1>
+        </div>
+        <div class="span6">
+            <h1>Меню для ресторана</h1>
+
+            <div class="accordion" id="accordion2">
+                <? foreach($restaurant_menus as $restaurant_menu): { ?>
+                               <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                            <? echo $restaurant_menu->restaurant_menu_type; ?>
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-body collapse in">
+                                        <div class="accordion-inner">
+                                           <? echo $lunch->restaurant_menu_type_name;?>
+                                        </div>
+                                    </div>
+                               </div>
+                <? } endforeach;  ?>
+
+            </div>
+        </div>
+    </div>
+</div>

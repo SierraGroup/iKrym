@@ -1,0 +1,37 @@
+<!-- http://twitter.github.io/bootstrap/javascript.html#modals  -->
+
+<!-- Button to trigger modal -->
+<!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+
+<button href="#myModal"  role="button"  data-toggle="modal"  class="button button_attraction_detailed_information" id="green_reserve_table" >
+    Зарезервовать столик
+</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Введите данные для резервации столика</h3>
+    </div>
+    <div class="modal-body">
+        <!-- http://twitter.github.io/bootstrap/base-css.html#forms -->
+        <form id="reserve_table_form">
+            <fieldset>
+
+                <label>Ваше имя</label>
+                <input type="text" name="reserve_table_name" placeholder="Введите ваше имя">
+
+
+                <label>Сколько вас будет человек?</label>
+                <input type="text" name="reserve_table_peoples" placeholder="Сколько людей будет с вами?">
+
+
+                <label>Ваш телефон?</label>
+                <input type="text" class="input input-large" name="reserve_table_telephone" placeholder="Ваш номер телефона?">
+                <br/>
+                <input type="submit" class="btn" value="Заказать столик"/>
+            </fieldset>
+        </form>
+    </div>
+
+</div>

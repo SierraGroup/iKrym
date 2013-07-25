@@ -1,0 +1,33 @@
+@facebook-color:#3e5a92;
+
+.social-icon(@color: #fff){
+        background: center center no-repeat @color;
+        border:1px solid darken(@color , 10%);
+        box-shadow: 0 3px 0 0 darken(@color, 5%), 0px 1px 0px darken(@color, 10%);
+
+        &:hover {
+          background-color:lighten(@color, 5%);
+        }
+  }
+a.btn {
+  border-radius:5px;
+  cursor:pointer;
+  display:inline-block;
+  height:50px;
+  transition:0.1s all linear;
+  width:50px;
+
+  &.facebook {
+    .social-icon(@facebook-color);
+    background-image: url('http://josephshambrook.com/small-icons/facebook-32.png');
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio : 2), only screen and (min-device-pixel-ratio : 2) {
+  .btn {
+    background-size:32px;
+    -webkit-background-size:32px;
+    &.facebook {
+      background-image: url('http://josephshambrook.com/small-icons/facebook-128.png');
+    }
+  }
+}

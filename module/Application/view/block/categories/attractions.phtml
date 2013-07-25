@@ -1,0 +1,33 @@
+<ul  class="  attraction-list">
+    <?php foreach ($attractions as $attraction) : ?>
+        <li>
+            <img width="200" height="100" src="<?php echo $this->basePath() .  $this->escapeHtml($attraction->attraction_main_photo);  ?>" class="img-polaroid">
+            <a href="<?php echo $this->basePath() . '/attraction/' . $this->escapeHtml($attraction->attraction_id_name); ?>"><?php echo $this->escapeHtml($attraction->attraction_name); ?></a><br/>
+            <a><?php echo $this->escapeHtml($attraction->attraction_address);?></a><br/>
+
+
+        </li>
+
+    <?php endforeach; ?>
+</ul>
+<script>
+
+</script>
+<style>
+    .attraction-list{
+            position: relative;
+            left: 10%;
+            opacity: 0;
+    }
+    .attraction-list li{
+        position: relative;
+        padding: 8%;
+    }
+    .attraction-list li img{
+        position: relative;
+        left: 10%;
+    }
+    .attraction-list li a{
+        text-align: center;
+    }
+</style>

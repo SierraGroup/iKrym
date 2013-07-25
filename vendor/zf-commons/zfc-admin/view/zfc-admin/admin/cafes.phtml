@@ -1,0 +1,55 @@
+<div class="row-fluid">
+        <div class="span8 object_admin_header">
+            <!--Body content-->
+            <h4>Кафе города Ялты</h4>
+            <a class="btn btn-primary" href="<?php echo $this->url('zfcadmin/cafes/add');?>">Добавить кафе</a>
+            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="cafe">
+                <thead>
+                        <tr>
+                            <th>Название кафе</th>
+                            <th>Описание кафе</th>
+                            <th>Рисунок кафе</th>
+                            <th>Рисунки кафе(*)</th>
+                            <th>Средняя стоимость услуг</th>
+                            <th>Основное направление кафе</th>
+                            <th>Рабочее время</th>
+                            <th>Телефон</th>
+                            <th>Адрес</th>
+                            <th>Сайт</th>
+                            <th>Кафе в сети VK/th>
+                            <th>Кафе в сети Facebook</th>
+                            <th>Кафе в сети Foursquare</th>
+                            <th>Кафе в сети Google Plus</th>
+                        </tr>
+                </thead>
+                <tbody>
+                <?php foreach($cafes as $cafe): ?>
+                    <tr>
+                        <td><? echo $cafe->cafe_name; ?></td>
+                        <td><? echo substr($cafe->cafe_description,0,50) . "...";  ?></td>
+                        <td><img width="450" height="100" class="main-image" src="<?php echo  $this->basePath() . substr($cafe->cafe_thumbnail,8); ?>" /></td>
+                        <td><? echo $cafe->cafe_images; ?></td>
+                        <td><? echo $cafe->cafe_average_account; ?> грн</td>
+                        <td><? echo $cafe->cafe_directions;?></td>
+                        <td><? echo $cafe->cafe_work_time; ?></td>
+                        <td><? echo $cafe->cafe_telephone; ?></td>
+                        <td><? echo $cafe->cafe_address; ?></td>
+                        <td><? echo $cafe->cafe_site; ?></td>
+                        <td><? echo $cafe->cafe_vk; ?></td>
+                        <td><? echo $cafe->cafe_facebook; ?></td>
+                        <td><? echo $cafe->cafe_foursquare; ?></td>
+                        <td><? echo $cafe->cafe_google_plus; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <!--Body content-->
+        </div>
+</div>
+<script>
+    $('#cafe').dataTable({
+        "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+        "sPaginationType": "bootstrap"
+
+    } );
+</script>

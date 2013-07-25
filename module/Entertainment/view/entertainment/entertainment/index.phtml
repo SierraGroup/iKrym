@@ -1,0 +1,134 @@
+
+<?php echo $topview; ?>
+
+<?php echo $navigation; ?>
+
+<div class="row-fluid" style=" width:1020px;">
+
+    <!--<div class="span3 entertainment_category">-->
+
+    <?php /*?> <?php echo $category; ?><?php */?>
+
+    <!--</div>-->
+
+    <div class="span77" style=" margin-top: -50px;">
+
+        <div class="attraction_grid" style=" float:left; ">
+
+            <h3 class="dostoprim">Развлечения</h3>
+            <p class="dostoprim">рядом с Вами...</p>
+            <!-- <div class="att-1">-->
+            <table width="720" border="0" style=" text-align:center;  padding-top: 25px; border-radius: 8px;  background-color: #f6f6f6; -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.2); -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.2); box-shadow: 5px 5px 10px rgba(0,0,0,0.2);">
+                <tr>
+                    <td>
+                        <ul class="grid_attraction cs-style-2" style="padding-bottom: 20px;">
+
+                            <?php foreach($entertainments as $entertainment) :?>
+
+
+                                <li>
+                                    <div style="width: 251px;  background-color: #fff; margin-top: 15px;">
+                                        <a style="margin-bottom: 20px; font-family: 'glametrixbold'; font-size:20px; color: #009999;" href="<?php echo $this->url('entertainment',
+
+                                            array('action'=>'entertainment', 'entertainment_id_name' => $entertainment->entertainment_id_name));?>"><?php echo $this->escapeHtml($entertainment->entertainment_name); ?></a>
+
+                                        <figure>
+
+                                            <img width="239" height="180" class="main-image" src="<?php echo $this->basePath() . substr($entertainment->entertainment_main_photo,7);?>"/>
+
+                                            <figcaption>
+
+                                                <br/>
+
+                                                <!--<span><b>Адресc:</b>   <span><?php echo $this->escapeHtml($entertainment->entertainment_address); ?></span>-->
+
+                                                <!--<span style="text-align: left;color: #339999; font-family: 'glametrixregular'; font-size: 17px;">режим работы:</span><span><?php echo $this->escapeHtml($entertainment->entertainment_time_work); ?></span>-->
+
+                                                <!--<span><b>Стоимость билета:</b>   <span><?php echo $this->escapeHtml($entertainment->entertainment_ticket_price); ?></span>-->
+
+                                                <!-- <span><b>Описание:</b>   <span><?php echo $this->escapeHtml($entertainment->entertainment_type); ?></span>-->
+
+                                                <table width="238" border="0" style="margin-left: 5px; margin-top: -10px;">
+                                                    <tr>
+                                                        <td colspan="2" style="text-align:right;"><a style="color: #ec3b18; font-size: 15px; font-family: 'asenine_cyrillicregular'; padding-right: 2px;" href="#">добавить в избранное</a><img src="http://s-group.in.ua/yalta/img/izbrannoe1.png" /></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left; width: 110px;"><span style="color: #339999; font-family: 'glametrixregular'; font-size: 17px;">режим работы</span></td>
+                                                        <td style="text-align: right;"><span style="color: #000; font-family: 'glametrixregular'; font-size: 17px;"><?php echo $this->escapeHtml($entertainment->entertainment_time_work); ?></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left;"><span style="color: #339999; font-family: 'glametrixregular'; font-size: 17px;">описание</span></td>
+                                                        <td style="text-align: right;"><span style="color: #000; font-family: 'glametrixregular'; font-size: 17px;"><?php echo $this->escapeHtml($entertainment->entertainment_type); ?></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left;"><span style="color: #339999; font-family: 'glametrixregular'; font-size: 17px;">стоимость билета</span></td>
+                                                        <td style="text-align: right;"><span style="color: #000; font-family: 'glametrixregular'; font-size: 17px;"><?php echo $this->escapeHtml($entertainment->entertainment_ticket_price); ?></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align:left;"><button class="button button-attraction-1" id="green">Проложить маршрут</button></td>
+                                                        <td style="text-align: right;" valign="middle"><img src="http://s-group.in.ua/yalta/img/rasstoyanie1.png" /></td>
+                                                    </tr>
+                                                </table>
+
+
+
+                                                <br/>
+
+                                                <!--<button class="button button-entertainment-1" id="red" onclick="">
+       
+                                                   Добавить в маршрут
+       
+                                                </button>-->
+
+                                            </figcaption>
+
+                                        </figure>
+                                    </div>
+                                </li>
+
+                            <?php endforeach; ?>
+
+
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+
+            <!--</div>-->
+
+        </div>
+        <div class="kalendar">
+            <div class="row">
+                <div class="g6">
+                    <!--<h2 class="h4">Новости достопримечательностей</h2>
+                    <p class="demoDesc">Последние новости из мира достопримечательностей города Ялты</p>-->
+                    <div id="eventCalendarHumanDate"></div>
+                    <script>
+                        $(document).ready(function() {
+                            $("#eventCalendarHumanDate").eventCalendar({
+                                eventsjson: 'http://s-group.in.ua/yalta/json/events.json',
+                                jsonDateFormat: 'human'  // 'YYYY-MM-DD HH:MM:SS'
+                            });
+                        });
+                    </script>
+                    <!--<pre>$(id).eventCalendar({
+                      eventsjson: 'events.json'
+                      jsonDateFormat: 'human'
+                    });</pre>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<?php echo $this->social; ?>
+<div class="footer">
+    <div class="infoot">
+
+
+    </div>
+
+</div>

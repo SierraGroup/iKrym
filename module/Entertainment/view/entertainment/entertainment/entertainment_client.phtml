@@ -1,0 +1,106 @@
+<?php echo $topline; ?>
+<?php echo $topview; ?>
+<div class="container-fluid">
+<div class="attraction_main">
+        <h1>Раздел достопримечательности</h1>
+</div>
+<?php echo $navigation; ?>
+    <div class="row-fluid attraction">
+
+        <div id="attraction_name" class="attraction_header">
+            <h1><?php echo $attraction->attraction_name; ?></h1>
+        </div>
+        <div class="span3 attraction_main_image">
+            <img width="200" src="<?php echo $this->basePath()  . '/'. substr($attraction->attraction_main_photo,8); ?>" class="img-polaroid">
+            <button onclick="add_to_distance();" class="button_to_favorites" id="green">
+                В Избранное
+            </button><br/><br/>
+            <p>Растояние от вашего местоположения равно :  <i class="distance"></i> км</p>
+            <button class="button-distance button-attraction-1" id="red" onclick="">
+                <b class="distance"></b> км
+            </button>
+
+        </div>
+        <div class="span3 attraction_information">
+            <?php echo $detailed_information; ?>
+        </div>
+        <div class="span4 attraction_map img-polaroid">
+            <!-- google maps block -->
+                  <?php echo $map_attraction; ?>
+            <!-- /google maps block -->
+        </div>
+
+        <div class="span4 attraction_other_objects">
+            <ul class="grid_attraction cs-style-2">
+            <h3>Обьекты рядом</h3>
+            <?php
+                $current_attraction = $attraction->attraction_name;
+                foreach($attractions as $attraction) :
+                if($current_attraction == $attraction->attraction_name) { continue; }
+                            else
+               { ?>
+                        <li>
+                            <figure>
+                                <img width="100" height="100" class="main-image" src="<?php echo $this->basePath().'/'. substr($attraction->attraction_main_photo,8);?>"/>
+                                <figcaption>
+                                    <a href="<?php echo $this->url('attraction',
+                                        array('action'=>'attraction', 'attraction_id_name' => $attraction->attraction_id_name));?>"><?php echo $this->escapeHtml($attraction->attraction_name); ?></a><br/>
+                                             <span><b>Адресc:</b>   <span><?php echo $this->escapeHtml($attraction->attraction_address); ?></span>
+                                                <button onclick="showRoute(<?php echo $attraction->attraction_latitude; ?>,<? echo $attraction->attraction_longitude; ?>);" class="button button-attraction-1" id="green">
+                                                    Проложить маршрут
+                                                </button><br/>
+                                                 <button class="button button-attraction-1" id="red" onclick="">
+                                                     Добавить в маршрут
+                                                 </button>
+                                </figcaption>
+                            </figure>
+                        </li>
+              <?php  }
+               endforeach; ?>
+               </ul>
+        </div>
+        <div class="span6 attraction_description">
+            <p> <?php echo $attraction->attraction_description; ?></p>
+        </div>
+
+    </div>
+        <!-- http://twitter.github.io/bootstrap/base-css.html#tables -->
+    <div class="span6">
+                   <div class="attraction_disqus">
+                        <h2>Оставьте ваш комментарий!</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'yaltapublic'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                   </div>
+        </div>
+</div>
+<?php echo $map-modal; ?>
+
+<script>
+    //функция добавления обьектов в список маршрутов
+    function add_to_distance(){
+        $.ajax({
+            type:"POST",
+            url:"/public/json/routes.php",
+            data:JSON.stringify({
+                "attraction_name" : $('#attraction_name').find('h1').text()
+            }),
+            contentType:"application/json"
+        });
+    }
+</script>
+
+
+
+

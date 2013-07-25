@@ -1,0 +1,182 @@
+<?php echo $topview; ?>
+<?php echo $navigation; ?>
+<div class="row-fluid" style=" width:1020px;">
+    <div class="span77" style=" margin-top: -50px;">
+
+            <h3 class="dostoprim">Достопримечательности</h3>
+            <p class="dostoprim">рядом с Вами...</p>
+            <h2>Сортировка</h2>
+        <div class="controls">
+            <h3>По категориям</h3>
+            <ul>
+                <li class="filter active" data-filter="all">Все</li>
+                <li class="filter" data-filter="category_1">Музеи</li>
+                <li class="filter" data-filter="category_2">Дворцы</li>
+                <li class="filter" data-filter="category_3">Природные достопри</li>
+                <li class="filter" data-filter="category_3 category_1">Category 1 &amp; 3</li>
+            </ul>
+        </div>
+
+        <div class="controls">
+            <ul>
+                <li class="sort" data-sort="data-ticket-price" data-order="desc">Цена по-спаданию</li>
+                <li class="sort" data-sort="data-ticket-price" data-order="asc">Цена по-возрастанию</li>
+
+                <li class="sort" data-sort="data-distance" data-order="desc">Расстояние по-спаданию</li>
+                <li class="sort" data-sort="data-distance" data-order="asc">Расстояние по-возрастанию</li>
+            </ul>
+
+
+        </div>
+
+
+            <div class="table">
+                <ul id="Grid">
+                    <? foreach($attractions as $attraction) : ?>
+                        <li class="mix table-row" data-distance="" data-ticket-price="<? echo $attraction->attraction_ticket_price;?>">
+                                    <table>
+                                        <tr>
+                                            <td><a href="<? echo $this->basePath() .'/attraction/'. $attraction->attraction_id_name; ?>"><? echo $attraction->attraction_name;?></a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <img class="img-pollaroid" width="80" height="80" src="<? echo $this->basePath() . '/' . substr($attraction->attraction_main_photo,7)?>">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table-row-star"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a style="color: #ec3b18; font-size: 15px; font-family: 'asenine_cyrillicregular'; padding-right: 2px;position: relative;left: 26%" href="#">добавить в избранное</a><img src="http://s-group.in.ua/yalta/img/izbrannoe1.png">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                           <td><a>Время работы:   <span><? echo $attraction->attraction_time_work; ?></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a>Тип:   <span><? echo $attraction->attraction_type; ?></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a>Вход:   <span><? echo $attraction->attraction_ticket_price; ?> грн</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a>Растояние:   <span class="distance"> км</span></a></td>
+                                        </tr>
+                                    </table>
+                        </li>
+
+                    <? endforeach; ?>
+                </ul>
+            </div>
+
+    </div>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="app-store-button" target="_blank">App Store</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="google-paly-button" target="_blank">Google Play</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="facebook-button" target="_blank">Facebook</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="vkontakte-button" target="_blank">Vkontakte</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="twitter-button" target="_blank">Twitter</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="registration-button" target="_blank">Registration</a>
+</div>
+<div class="buttonsocial">
+    <a href="#" class="fly-button" id="login-button" target="_blank">Login</a>
+</div>
+<div class="footer">
+    <div class="infoot">
+    </div>
+</div>
+<style>
+    .controls{
+        display: inline-block;
+        width: 180px;
+        margin: 0 0 30px;
+        vertical-align: top;
+        font-family: 'glametrixbold';
+    }
+
+    .controls li{
+        margin-left: 20px;
+        cursor: pointer;
+        list-style-type: square;
+    }
+
+    .controls li.active{
+        font-weight: 700;
+    }
+
+    hr{
+        margin: 0 0 30px;
+        height: 0;
+        border: 0 none;
+        border-top: 1px solid #eee;
+    }
+    #Grid .gap{
+        display: inline-block;
+        width: 200px;
+    }
+
+    .table{
+        max-width: 67%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: center;
+        padding-top: 25px;
+        border-radius: 8px;
+        background-color: #f6f6f6;
+        -webkit-box-shadow:5px 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    }
+    .table-row{
+        width: 200px;
+        background-color: #fff;
+        margin-top: 15px;
+        box-shadow: 2px 2px 14px black;
+    }
+    .table-row table  tr td a{
+        margin-bottom: 20px;
+        font-family: 'glametrixbold';
+        font-size: 17px;
+        color: #009999;
+        text-align: center;
+    }
+    .table-row table  tr td img{
+        position: relative;
+        left: 30%;
+    }
+    .table-row table  tr td a span{
+        float: right;
+        font-size: 17px;
+        color: #000000;
+    }
+
+</style>
+<script>
+
+
+    /*
+     *	We would normally recommend that all JavaScript is kept in a seperate .js file,
+     * 	but we have included it in the document head for convenience.
+     */
+
+    // INSTANTIATE MIXITUP
+
+    $(function(){
+        $('#Grid').mixitup();
+
+    });
+
+
+</script>

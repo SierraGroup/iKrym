@@ -1,0 +1,30 @@
+
+<?php echo $topline; ?>
+<?php echo $topview; ?>
+<?php echo $navigation; ?>
+<div class="row-fluid">
+        <div class="span4">
+            <?php echo $categories; ?>
+        </div>
+        <div class="span8 transport">
+            <h2>Расписание всех транспортов города Ялта</h2>
+            <div class="span4">
+                <div class="transport-item"><a href="<?php echo $this->url('transport/minibus');?>">Список маршруток</a></div>
+            </div>
+            <div class="span5">
+                <div class="transport-item"><a href="<?php echo $this->url('transport/minibus/minibus_shedule');?>">Расписание маршруток</a></div>
+            </div>
+            <div class="span4">
+                <div class="transport-item"><a>Список автобусов</a></div>
+            </div>
+            <div class="span5">
+                <div class="transport-item"><a>Расписание автобусов</a></div>
+            </div>
+            <div class="span4">
+                <div class="transport-item"><a>Список такси</a></div>
+            </div>
+            <div class="span5">
+                <div class="transport-item"><a>Расписание такси</a></div>
+            </div>
+        </div>
+</div>

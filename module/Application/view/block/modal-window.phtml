@@ -1,0 +1,14 @@
+<!-- http://tympanus.net/Development/ModalWindowEffects/ -->
+
+<div class="hero-unit md-effect-1" id="modal-1">
+    <div class="md-content">
+        <a class="md-close"><i class="icon-white icon-remove"></i></a>
+        <h3>Узнайте свое местоположение</h3>
+            <p>
+                <a onclick="Geo.getPosition(function(){document.location.reload()}, {update: true}); return false;" class="btn btn-success btn-large"><i class="icon-white icon-search"></i> Узнать свое местоположение!</a>
+            </p>
+    </div>
+</div>
+
+<!-- Наложение фона для модального окна.Настройки делаються через jQuery  -->
+<div class="overlay"></div>

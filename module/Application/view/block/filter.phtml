@@ -1,0 +1,154 @@
+
+<div class="accordion main">
+    <input type="checkbox" id="acHead1" name="acHead1"/>
+    <label for="acHead1">Выберите категорию</label>
+    <div class="accordion-body">
+        <div class="accordion">
+            <input type="checkbox" id="acHead11" name="acHead11"/>
+            <label for="acHead11">Достопримечательности</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Транспорт</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Рестораны</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Кафе</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Клубы</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Развлечения</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Шопинг</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Здоровье и спорт</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Гостиницы и минигостиницы</label>
+        </div>
+        <div class="accordion">
+            <input type="checkbox" id="acHead12" name="acHead12"/>
+            <label for="acHead12">Частный сектор</label>
+        </div>
+
+    </div>
+</div>
+<style>
+    @-webkit-keyframes fold {
+        0% {
+            margin-bottom: 0px;
+            visibility: visible;
+            line-height: 0;
+            -webkit-transform-origin: 0 0 0;
+            transform-origin: 0 0 0;
+            -webkit-transform: rotate3d(1, 0, 0, -90deg);
+            transform: rotate3d(1, 0, 0, -90deg);
+            height: 0px;
+        }
+
+        25% {
+            margin-bottom: 15px;
+            line-height: 16px;
+            -webkit-transform: rotate3d(1, 0, 0, 0deg);
+            transform: rotate3d(1, 0, 0, 0deg);
+        }
+
+        75% {
+            margin-bottom: 10px;
+            -webkit-transform: rotate3d(1, 0, 0, 25deg);
+            transform: rotate3d(1, 0, 0, 25deg);
+        }
+
+        100% {
+            margin-bottom: 0;
+            visibility: visible;
+            height: auto;
+            -webkit-transform-origin: 0 0 0;
+            transform-origin: 0 0 0;
+            -webkit-transform: rotate3d(1, 0, 0, 0deg);
+            transform: rotate3d(1, 0, 0, 0deg);
+            height: auto;
+        }
+    }
+    .main{
+        position: relative;
+        /*right: 179%;*/
+        left: 12%;
+    }
+    .accordion {
+        -webkit-perspective: 400;
+        perspective: 400;
+        background-image: url('http://s-group.in.ua/yalta/img/bg-left-menu1.jpg');
+        margin-bottom: 0;
+    }
+    .accordion input {
+        display: none;
+    }
+    .accordion label {
+        padding: 10px 15px;
+        display: block;
+        background: -webkit-linear-gradient(top, white 1%, #eaeaea 100%);
+        box-shadow: 0px 0px 0px 1px rgba(155, 155, 155, 0.3), 1px 0px 0px 0px rgba(255, 255, 255, 0.9) inset, 0px 2px 2px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        color: #777;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+        line-height: 12px;
+        font-size: 20px;
+        font-family: 'glametrixbold';
+        text-align: center;
+    }
+    .accordion input:checked + label {
+        background: -webkit-linear-gradient(top, #5eafc9 1%, #2e697c 100%);
+        text-shadow: none;
+        color: #EFEFEF;
+    }
+    .accordion .accordion-body {
+        -webkit-perspective: 400;
+        perspective: 400;
+        visibility: hidden;
+        -webkit-animation: fold 300ms ease-in reverse;
+        -webkit-transform: rotate3D(1, 0, 0, -90deg);
+        height: 0;
+    }
+    .accordion input:checked ~ .accordion-body {
+        display: block;
+        visibility: visible;
+        -webkit-transform: rotate3D(1, 0, 0, 0deg);
+        height: auto;
+        -webkit-animation: fold ease-in 500ms;
+    }
+
+</style>
+<script>
+    $().ready(function(){
+        $('input:checkbox').change(function(){
+            var self = $(this)[0].parentElement;
+            var parent = $(self)[0].parentElement;
+            var children = $(self)[0].children[2].children;
+
+            if($(parent).attr('class') !== "container"){
+                var i=0; l=$(parent).children().length;
+                for(i=0;i<l;i++){
+                    if($(parent).children()[i] != self){
+                        $($($(parent).children()[i])[0].firstElementChild).attr('checked', false);
+                    }
+                }
+            }
+            console.log($(this).attr('checked'));
+            console.log($(this)[0].attributes);
+        });
+    });
+</script>

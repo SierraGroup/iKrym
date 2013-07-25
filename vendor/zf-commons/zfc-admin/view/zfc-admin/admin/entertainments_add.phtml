@@ -1,0 +1,56 @@
+<?php
+$title = 'Добавить новый клуб';
+$this->headTitle($title);
+?>
+<div class="container-fluid object_add">
+
+    <div class="row-fluid">
+        <div  style="margin-top: 1%;margin-left: 31%" class="span8 object_add_form">
+
+            <h1>Добавить развлечение</h1>
+            <?php
+            $form = $this->form;
+            $form->setAttribute('action',$this->url('zfcadmin/entertainments/add'));
+            $form->prepare();
+
+            echo $this->form()->openTag($form);
+            echo $this->formHidden($form->get('entertainment_id'));
+            echo $this->formRow($form->get('entertainment_id_name'));
+            echo $this->formRow($form->get('entertainment_name'));
+            echo $this->formRow($form->get('entertainment_type'));
+
+
+            //http://framework.zend.com/manual/2.2/en/modules/zend.form.file-upload.html
+            $fileElement = $form->get('entertainment_main_photo');
+            echo $this->formLabel($fileElement);
+            echo $this->formFile($fileElement);
+            echo $this->formElementErrors($fileElement);
+
+            echo $this->formRow($form->get('entertainment_additional_photos'));
+
+            echo $this->formRow($form->get('entertainment_time_work'));//Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_ticket_price'));//Zend\Form\Element\MultiCheckbox
+
+            echo $this->formRow($form->get('entertainment_telephone'));
+            echo $this->formRow($form->get('entertainment_address'));
+            //Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_description'));//Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_site'));//Zend\Form\Element\Text
+
+            echo $this->formRow($form->get('entertainment_longitude'));//Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_latitude'));//Zend\Form\Element\Text
+
+            echo $this->formRow($form->get('entertainment_vk'));//Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_facebook'));////Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_foursquare'));////Zend\Form\Element\Text
+            echo $this->formRow($form->get('entertainment_google_plus'));
+            echo $this->formRow($form->get('entertainment_features'));
+
+            ?><br/>
+            <?
+            echo $this->formSubmit($form->get('submit'));
+            echo $this->form()->closeTag();
+            ?>
+        </div>
+    </div>
+</div>

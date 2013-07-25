@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs nav-stacked attraction_detailed_information">
+    <li>
+       <h4>Время работы</h4>
+       <a><?php echo $hostel->hostel_work_time; ?></a>
+       <h4>Телефон</h4>
+       <a><?php echo $hostel->hostel_telephone; ?></a>
+       <h4>Адрес</h4>
+       <a><?php echo $hostel->hostel_address; ?></a>
+       <button  class="button button_attraction_detailed_information" id="green">
+            <a href="<?php echo $hostel->hostel_site; ?>" style="color: #ffffff;cursor: pointer;text-decoration: none">Перейти на сайт</a>
+       </button><br/>
+       <button class="button button_attraction_detailed_information" id="red" >
+            Проложить маршрут
+        </button>
+        <?php echo $reserve_table; ?>
+    </li>
+</ul>

@@ -1,0 +1,1082 @@
+/* Reset */
+@font-face {
+    font-family: 'ecoicon';
+    src:url('http://s-group.in.ua/yalta/fonts/ecoicons/ecoicon.eot');
+    src:url('http://s-group.in.ua/yalta/fonts/ecoicons/ecoicon.eot?#iefix') format('embedded-opentype'),
+    url('http://s-group.in.ua/yalta/fonts/ecoicons/ecoicon.woff') format('woff'),
+    url('http://s-group.in.ua/yalta/fonts/ecoicons/ecoicon.ttf') format('truetype'),
+    url('http://s-group.in.ua/yalta//fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'asenine_cyrillicregular';
+    src: url('http://s-group.in.ua/yalta//fonts/asenine/asenine_cyrillic-webfont.eot');
+    src: url('http://s-group.in.ua/yalta/fonts/asenine/asenine_cyrillic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://s-group.in.ua/yalta/fonts/asenine/asenine_cyrillic-webfont.woff') format('woff'),
+         url('http://s-group.in.ua/yalta/fonts/asenine/asenine_cyrillic-webfont.ttf') format('truetype'),
+         url('http://s-group.in.ua/yalta/fonts/asenine/asenine_cyrillic-webfont.svg#asenine_cyrillicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'glametrixregular';
+    src: url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrix-webfont.eot');
+    src: url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrix-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrix-webfont.woff') format('woff'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrix-webfont.ttf') format('truetype'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrix-webfont.svg#glametrixregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'glametrixbold';
+    src: url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixbold-webfont.eot');
+    src: url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixbold-webfont.woff') format('woff'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixbold-webfont.ttf') format('truetype'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixbold-webfont.svg#glametrixbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'glametrixlight';
+    src: url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixlight-webfont.eot');
+    src: url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixlight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixlight-webfont.woff') format('woff'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixlight-webfont.ttf') format('truetype'),
+         url('http://s-group.in.ua/yalta/fonts/glamentrix/glametrixlight-webfont.svg#glametrixlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'country_western_script_blacRg';
+    src: url('http://s-group.in.ua/yalta/fonts/western/country_western_script_black-webfont.eot');
+    src: url('http://s-group.in.ua/yalta/fonts/western/country_western_script_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://s-group.in.ua/yalta/fonts/western/country_western_script_black-webfont.woff') format('woff'),
+         url('http://s-group.in.ua/yalta/fonts/western/country_western_script_black-webfont.ttf') format('truetype'),
+         url('http://s-group.in.ua/yalta/fonts/western/country_western_script_black-webfont.svg#country_western_script_blacRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    -webkit-text-size-adjust:none;
+}
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+body { width: 100%; margin: 0 auto; background-image: url('http://s-group.in.ua/yalta/img/bg-general1.jpg'); background-repeat:repeat;}
+
+div.row-fluid-topper { width: 100%; margin: 0 auto; background-image: url('http://s-group.in.ua/yalta/img/bg-top1.jpg'); background-repeat:repeat-x; height: 189px;}
+
+div.row-fluid.head { width: 1020px; margin: 0 auto;}
+
+div.row-fluid {width: 770px; margin: 0 auto; }
+
+
+div.span6.navigation_span {margin-top: -107px;}
+div.navbar-inner { width: 700px; margin-top: -130px; }
+
+
+div.container-fluid {width: 1020px; margin: 0 auto;}
+
+/*div.span7 { padding-left: 250px; padding-top: 15px;}*/
+
+
+div.footer { margin: 0 auto; background-image: url('http://s-group.in.ua/yalta/img/bg-footer1.jpg'); background-repeat: repeat-x; background-color: #d3d6d8; height: 450px; background-position:left top;}
+
+div.infoot { width: 1020px; margin: 0 auto;}
+
+div.buttonsocial { right: 0; z-index: 10; position: fixed; top: 240px; width: 32px;}
+
+a#app-store-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/apple-store1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px;}
+
+a#google-paly-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/google-play1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px; top: 33px;}
+
+a#facebook-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/facebook1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px; top: 80px;}
+
+a#vkontakte-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/vkontakte1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px; top: 113px;}
+
+a#twitter-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/twitter1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px; top: 146px;}
+
+a#registration-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/registratsia1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px; top: 193px;}
+
+a#login-button.fly-button {background-image: url('http://s-group.in.ua/yalta/img/voiti1.png'); width: 139px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    transition: margin .8s;
+    -moz-transition: margin .8s;
+    -webkit-transition: margin .8s;
+    -o-transition: margin .8s; text-indent: -9999px; top: 226px;}
+
+.buttonsocial .fly-button:hover {margin-left: -107px;}
+
+div.topimgmap {background-image: url('http://s-group.in.ua/yalta/img/map-top1.png'); background-repeat:no-repeat; width: 306px; height: 34px; z-index: 20; position:absolute; margin-top: -70px; margin-left: -120px;}
+
+ 
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+menu li, ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+div.row-fluid.main_map { width: 600px; height: 600px; margin-left: -230px; }
+
+div.span8 {margin-top: -65px;}
+
+html { background-image: url('http://s-group.in.ua/yalta/img/bg-general1.jpg'); background-repeat:repeat;}
+.head{
+    /*margin-top: 3%;*/
+    /*margin-bottom: 2%;*/
+    /*margin-left: 11%;*/
+    position: relative;
+    top: 3%;
+    left: 2%;
+}
+.head li{
+    float: left;
+    margin-left: 7%;
+
+}
+.update_location h3{
+    position: relative;
+    left: 6%;
+}
+.right {
+    float: right !important;
+}
+.main-menu{
+    position: relative;
+    right: 19%;
+}
+.filter{
+    position: relative;
+    left: 4%;
+    cursor: pointer;
+}
+.main_map{
+    position: relative;
+    /*left: 5%;*/
+	
+}
+
+/*   right slide main menu   */
+.right-side{
+    position: relative;
+    /*left: 27%;*/
+    width: 77%;
+}
+/*---------------------------*/
+
+.favorites {margin-top: -20px; text-align:right;}
+
+.favorites_city{
+    float: left;
+    position: relative;
+    margin-left: 100px;
+	font-family: 'asenine_cyrillicregular'; 
+	font-size: 18px; 
+	color: #009999; 
+	font-weight:normal;
+	
+}
+
+div.favorites_city a {color: #009999; }
+
+.favorites_favorites{
+    position: relative;
+    /*padding-left: 15px;*/
+	margin-left: 165px;
+	font-family: 'asenine_cyrillicregular'; 
+	font-size: 18px; 
+	color: #ec3b18; 
+	font-weight:normal;
+	background-image: url('http://s-group.in.ua/yalta/img/izbrannoe1.png'); background-repeat:no-repeat; height: 15px; width: 15px; background-position:left center;
+	
+}
+
+div.favorites_favorites a {color: #ec3b18; padding-left: 20px;}
+.right-side-search{
+    position: relative;
+   /* left: 13%;*/
+    margin-top: 4%;
+	/*text-align:right;
+	float:right;*/
+
+}
+
+
+input.input-medium.search-query {font-family: 'asenine_cyrillicregular'; 
+	font-size: 18px; color: #009999; }
+	
+/*button.btn {background-image: url('http://s-group.in.ua/yalta/img/search-btn1.png'); background-repeat:no-repeat; height: 20px; width: 21px; border:none; text-indent: -9999px; padding: 0px;*/
+/*-webkit-border-radius: 0px;*/
+/*-webkit-border-radius: 0px;*/
+/*-moz-border-radius: 0px;*/
+/*-moz-border-radius: 0px;*/
+/*border-radius: 0px;*/
+/*border-radius: 0px;*/
+/*background-color: #f2f5f6;*/
+/*left: 102px;*/
+
+/*}*/
+
+/*button.btn:hover {background-color: #f2f5f6;*/
+/*background-image: url('../img/search-btn1.png'); background-repeat:no-repeat; height: 20px; width: 21px; border:none; text-indent: -9999px;*/
+
+.navbar .nav>li>a {font-family: 'asenine_cyrillicregular'; color: #009999; font-size: 19px;}
+
+.nav-tabs.nav-stacked>li>a { font-family: 'glametrixbold'; color: #779396; font-size: 21px;}
+
+.nav-tabs.nav-stacked>li { background-image: url('http://s-group.in.ua/yalta/img/bg-left-menu1.jpg'); background-repeat:repeat-y; width: 200px; margin-bottom: 3px;}
+
+/*div.navbar-inner { width: 800px; margin-top: -137px; margin-left: 50px;}
+
+div.navbar {width: 600px;}
+*/
+/*---------------------------*/
+
+    html, body, #map-canvas {
+       /* margin: 0;*/
+        padding: 0;
+        height: 100%;
+    }
+    .grid{
+        padding: 70px 20px 100px 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+    /*------ layout for attraction module start ------*/
+    .grid_attraction{
+        padding: 0;
+        max-width: 1300px;
+        margin: 0 auto;
+        list-style: none;
+        /*text-align: center;*/
+    }
+    .grid_attraction li{
+        display: inline-block;
+        width: 230px;
+        margin-left: 50px;
+        box-shadow: 1px 4px 24px 1px #000;
+        position: relative;
+        height: 214px;
+        font: 1em 'Noto Serif', serif;
+    }
+    /*restaurants*/
+    .grid_restaurant figure figcaption ,.grid_cafe figure figcaption{
+            position: relative;
+            bottom:  93px;
+            z-index: 1;
+    }
+    .grid_restaurant li{
+            margin-bottom: 30px;
+    }
+    .grid_attraction figure{
+        margin: 0;
+
+    }
+    .grid_attraction figure figcaption{
+        /*height: 0;*/
+        position:   relative;
+        bottom: 217px;
+        z-index: 1;
+    }
+    .grid_attraction figure figcaption span .button-attraction-1{
+        position: relative;
+        width: 83%;
+        font-size: 18px;
+        left: 10%;
+    }
+    .grid_attraction figure span .button{
+        margin-left: 0;
+    }
+    .attraction_category{
+        position: relative;
+        left: 3%;
+    }
+    .attraction_poster_header{
+        position: relative;
+        left:10%;
+        margin-top: 5%;
+    }
+    .attraction_poster{
+        position: relative !important;
+        left: 10% !important;
+    }
+
+                /*------ layout for restaurant module start ------*/
+                .grid_restaurant ,.grid_cafe{
+                    padding: 0;
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    list-style: none;
+                    /*text-align: center;*/
+                }
+                .grid_restaurant li , .grid_cafe li{
+                    display: inline-block;
+                    width: 230px;
+                    margin-left: 50px;
+                    margin-top: 20px;
+                    box-shadow: 1px 4px 24px 1px #000;
+                    position: relative;
+                    height: 147px;
+                    font: 1em 'Noto Serif', serif;
+                }
+                .grid_cafe li{
+                    height: 200px;
+                }
+                .grid_cafe li figcaption{
+                    bottom: 176px;
+                }
+                .grid_restaurant figure ,.grid_cafe figure{
+                    margin: 0;
+
+                }
+                .grid_restaurant figure figcaption ,.grid_cafe figure figcaption{
+                    /*height: 0;*/
+                    position:   relative;
+                    bottom: 134px;
+                    left: 5px;
+                    z-index: 1;
+                }
+                .grid_restaurant figure figcaption span .button-attraction-1 ,.grid_cafe figure figcaption span .button-attraction-1{
+                    position: relative;
+                    width: 83%;
+                    font-size: 18px;
+                    left: 10%;
+                }
+                .grid_restaurant figure span .button ,.grid_cafe figure span .button{
+                    margin-left: 0;
+                }
+                .attraction_category{
+                    position: relative;
+                    left: 3%;
+                }
+                .attraction_poster_header{
+                    position: relative;
+                    left:10%;
+                    margin-top: 5%;
+                }
+                .attraction_poster{
+                    position: relative !important;
+                    left: 10% !important;
+                }
+                .attraction_disqus{
+                    position: relative;
+                    left: 32%;
+                }
+
+    /*------ layout for attraction module  end ------*/
+    .grid li{
+        display: inline-block;
+        width: 440px;
+        margin: 0;
+        padding: 20px;
+        text-align: left;
+        position: relative;
+        box-shadow: 1px 4px 24px 1px #000;
+        margin-left: 63px;
+        float: left;
+        margin-top: 9px;
+    }
+    .grid figure{
+        margin: 0;
+        /*position: relative;*/
+        margin-top: 60px;
+    }
+    .grid figure .main-image{
+        max-width: 100%;
+        display: block;
+        position: relative;
+    }
+    .grid figcaption{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        background: #ffffff;
+        color: #ed4e6e;
+        text-align: center;
+        font-family: 'Noto Serif', serif;
+    }
+    .grid figcaption h4{
+        margin: 0;
+        padding: 0;
+        color: #000;
+        font-size: 39px;
+    }
+
+
+    .grid a{
+        font-size: 43px;
+        cursor: pointer;
+        text-decoration: none;
+        position: relative;
+        left: 13px;
+    }
+            .cs-style-2 figure .main-image {
+                position: relative;
+                z-index: 2;
+                -webkit-transition: -webkit-transform 0.4s;
+                -moz-transition: -moz-transform 0.4s;
+                transition: transform 0.4s;
+                box-shadow: 1px 1px 10px 1px #000;
+            }
+
+            .cs-style-2 figure:hover .main-image,
+            .cs-style-2 figure .cs-hover .main-image {
+                -webkit-transform: translateY(180px);
+                -moz-transform: translateY(180px);
+                -ms-transform: translateY(180px);
+                transform: translateY(180px);
+            }
+        .cs-style-2 figcaption{
+            height: 160px;
+            width: 100%;
+            /*top: 130px;*/
+            /*bottom: 0;*/
+        }
+        .cs-style-2 figcaption a{
+            position: relative;
+            /*right: 20px;*/
+            /*top: 30px;*/
+            float: left;
+
+        }
+
+        .button{
+            width: 300px;
+            height: 37px;
+            /*float: left;*/
+            color: white;
+            font-size: 25px;
+            line-height: 50px;
+            text-align: center;
+            /*margin-right: 60px;*/
+            /*margin-bottom: 60px;*/
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            /*margin-top: 13px;*/
+            margin-left: 52px;
+        }
+        .button-distance{
+            width: 200px;
+            height: 40px;
+            color: #000000;
+            font-size: 25px;
+            text-align: center;
+            background: #6accc3;
+            -webkit-box-shadow: 0px 7px 0px rgb(111, 174, 166);
+            -moz-box-shadow: 0px 7px 0px rgb(109, 174, 157);
+            box-shadow: 0px 7px 0px rgb(98, 174, 172);
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px #000;
+        }
+        .button:hover{
+            margin-bottom: 3px;
+        }
+        .button#green{
+            background: #2ecc71;
+            -webkit-box-shadow: 0px 7px 0px rgba(39, 174, 96, 1);
+            -moz-box-shadow: 0px 7px 0px rgba(39, 174, 96, 1);
+            box-shadow: 0px 7px 0px rgba(39, 174, 96, 1);
+        }
+        .button#green:hover{
+            background-color: #43D47A;
+            -webkit-box-shadow: 0px 4px 0px rgba(39, 174, 96, 1);
+            -moz-box-shadow: 0px 4px 0px rgba(39, 174, 96, 1);
+            box-shadow:  0px 4px 0px rgba(39, 174, 96, 1);
+            margin-bottom: 3px;
+        }
+        .button#red{
+            background: #cc3431;
+            -webkit-box-shadow: 0px 7px 0px rgb(174, 53, 3);
+            -moz-box-shadow: 0px 7px 0px rgb(174, 17, 50);
+            box-shadow: 0px 7px 0px rgb(174, 13, 57);
+            /*margin-top: 10px;*/
+        }
+        .button#red:hover{
+            background-color: #d46017;
+            -webkit-box-shadow: 0px 4px 0px rgb(174, 96, 55);
+            -moz-box-shadow: 0px 4px 0px rgb(174, 66, 53);
+            box-shadow:  0px 4px 0px rgb(174, 43, 36);
+            margin-bottom: 3px;
+        }
+        .button#yellow{
+            background: #30a0cc;
+            -webkit-box-shadow: 0px 7px 0px rgb(32, 154, 174);
+            -moz-box-shadow: 0px 7px 0px rgb(28, 120, 174);
+            box-shadow: 0px 7px 0px rgb(30, 169, 174);
+            /*margin-top: 10px;*/
+        }
+        .button#yellow:hover{
+            background-color: #25bbd4;
+            -webkit-box-shadow: 0px 4px 0px rgb(28, 151, 174);
+            -moz-box-shadow: 0px 4px 0px rgb(28, 144, 174);
+            box-shadow:  0px 4px 0px rgb(53, 157, 174);
+            margin-bottom: 3px;
+        }
+        .map{
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+/* ------------attractions section ------------- */
+   .attraction_grid ul li a {
+       font-size: 25px;
+   }
+   .attraction_grid h3{
+       position: relative;
+       left: 9%;
+   }
+   .attraction-menu{
+       position: relative;
+       width: 91%;
+       right: 8%;
+   }
+   .attraction_main{
+       position: relative;
+       left: 12%;
+   }
+   .attraction_header ,.restaurant_header{
+       position: relative;
+       left: 12%;
+       width: 48%;
+       /*text-align: center;*/
+       margin-top: 2%;
+   }
+   .navigation_span{
+        position: relative;
+        width: 46%;
+        left: 3%;
+        margin-top: 3%;
+   }
+/* --------------------------------------------- */
+
+
+/*--------------restaurants section -------------*/
+
+    .restaurant-menu{
+        position: relative;
+        left: 5%;
+    }
+    .restaurants_grid {
+         /*margin-top: 100px;*/
+        position: relative;
+        left: 9%;
+    }
+    .restaurant_grid h3,.cafe_grid h3{
+        position: relative;
+        left: 22%;
+    }
+
+    .restaurant{
+       /* margin-top: 120px; */
+    }
+    .restaurant h1{
+        position: relative;
+        left: 20%;
+    }
+    .restaurant_site{
+        position:   relative;
+        width: 13%;
+        font: 3em 'Noto Serif',serif;
+        height: 70px;
+        left: 38%;
+        /*padding-top: 4%;*/
+    /*}*/}
+    .restaurant_carousel_map{
+        position: relative;
+        right: 2%;
+        height: 320px;
+        /*padding-top: 5%;*/
+    }
+    .restaurant_carousel_map , .restaurant_tab{
+        padding-top: 4%;
+    }
+    .restaurant_carousel_map img{
+            border-radius: 10px;
+            border-style: solid;
+            border-color: orange;
+            border-width: 10px;
+            box-shadow: 0px 6px 11px rgb(0, 0, 0);
+            -moz-box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.43);
+            -webkit-box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.43);
+
+    }
+    .restaurant h1{
+        font: 4em 'Noto Serif', serif;
+        position: relative;
+        left: 37%;
+    }
+    .restaurant h2{
+        font: 2em 'Noto Serif',serif;
+        position: relative;
+        left: 0%;
+    }
+    .restaurant_map{
+        /*margin-bottom: 50px;*/
+        position: relative;
+        bottom: 355px;
+        width: 59%;
+        left: 35%;
+    }
+    .restaurant_carousel{
+            position: relative;
+            width: 21%;
+            left: 25%;
+    }
+     .carousel-control{
+        top: 50%;
+    }
+    .restaurant_tab{
+        position: relative;
+        width: 60%;
+        left: 22%;
+        /*padding-top: 6%;*/
+
+    }
+    #tabs{
+        font-family: 'Noto Serif', serif;
+    }
+    .restaurant_features{
+        position: relative;
+        width: 19%;
+        left: 42%;
+    }
+
+        /* social links */
+        .restaurant_social_links , .attraction_social_links{
+            position: relative;
+            /*width: 13%;*/
+            /*height: 48px;*/
+            left: 42%;
+            padding-top: 4%;
+        }
+        .restaurant_social_links ul li , .attraction_social_links ul li{
+            position: relative;
+            width: 4%;
+            float: left;
+        }
+        .attraction_social_links ul li{
+            width: 8%;
+        }
+
+        .restaurant_social_links , .attraction_social_links a.btn {
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            height: 50px;
+            transition: 0.1s all linear;
+            width: 50px;
+        }
+.restaurant_social_links , .attraction_social_links  a.btn.facebook {
+            background: center center no-repeat #3e5a92;
+            border: 1px solid #2f446e;
+            box-shadow: 0 3px 0 0 #364f80, 0px 1px 0px #2f446e;
+            background-image: url('http://josephshambrook.com/small-icons/facebook-32.png');
+        }
+.restaurant_social_links , .attraction_social_links  a.btn.vk{
+            background: center center no-repeat #0480be;
+            border: 1px solid #006dcc;
+            box-shadow: 0 3px 0 0 #0081c2 , 0px 1px 0px #0081c1;
+            background-image: url('');
+        }
+.restaurant_social_links , .attraction_social_links   a.btn.facebook:hover {
+            background-color: #4665a4;
+        }
+.restaurant_social_links , .attraction_social_links  a.btn.twitter {
+            background: center center no-repeat #31a6d8;
+            border: 1px solid #2288b4;
+            box-shadow: 0 3px 0 0 #2698c9, 0px 1px 0px #2288b4;
+            background-image: url('http://josephshambrook.com/small-icons/twitter-32.png');
+        }
+.restaurant_social_links , .attraction_social_links  a.btn.twitter:hover {
+            background-color: #46afdc;
+        }
+.restaurant_social_links , .attraction_social_links    a.btn.foursquare {
+            background: center center no-repeat #0cbadf;
+            border: 1px solid #0992af;
+            box-shadow: 0 3px 0 0 #0ba6c7, 0px 1px 0px #0992af;
+            background-image: url('http://josephshambrook.com/small-icons/foursquare-32.png');
+        }
+.restaurant_social_links , .attraction_social_links    a.btn.foursquare:hover {
+            background-color: #12cbf2;
+        }
+.restaurant_social_links , .attraction_social_links     a.btn.youtube {
+            background: center center no-repeat #ff3333;
+            border: 1px solid #ff0000;
+            box-shadow: 0 3px 0 0 #ff1919, 0px 1px 0px #ff0000;
+            background-image: url('http://josephshambrook.com/small-icons/youtube-32.png');
+        }
+.restaurant_social_links , .attraction_social_links    a.btn.youtube:hover {
+            background-color: #ff4d4d;
+        }
+        /* socail links */
+       /*.restaurant_button{*/
+            /*position: relative;*/
+            /*left: 40%;*/
+            /*margin-top: 4%;*/
+       /*}*/
+/*.restaurants_block_right{*/
+        /*position: relative;*/
+        /*left: 5%;*/
+/*}*/
+
+
+/*-------------------------------------restaurants section ----------------------------------------*/
+
+
+
+
+
+/*  ------ notebook section ---------- */
+@media(max-width:1349px){
+        .navigation__ul{
+            position: relative;
+            right: 20%;
+
+        }
+/*----notebook section -- attraction controller----*/
+        .attraction .span10 h1  {
+            font:3em 'Noto Serif', serif;
+            position: relative;
+            left: 31%;
+        }
+        .attraction_news{
+            position: relative;
+            left: 50%;
+            margin-top: 5%;
+        }
+         .attraction .span10 .attraction_news h2{
+             font:2em 'Noto Serif' , serif;
+             position: relative;
+             left: 30%;
+         }
+        .attraction .span4{
+            position: relative;
+            left: 7%;
+            margin-top: 39px;
+        }
+        .attraction .span5{
+            position: relative;
+            left: 9%;
+        }
+        .attraction .span6 .attraction_description ,.attraction .span6 .attraction_disqus ,.attraction .span6 .attraction_button{
+            position: relative;
+            margin-top: 4%;
+            left: 50%;
+        }
+        .attraction .span6 .attraction_button{
+            left: 60%;
+        }
+        .attraction .span6 .attraction_description p,.attraction .span8 p{
+            font: 1em 'Noto Serif', serif;
+        }
+        .attraction_buttons .button{
+            float: left;
+            position: relative;
+            left: 12%;
+        }
+        .attraction_detailed_information{
+            position: relative;
+            right: 38%;
+        }
+        .attraction_detailed_information h4{
+            text-align: center;
+        }
+        .button_attraction_detailed_information{
+            position: relative;
+            right: 15%;
+            margin-top: 8%;
+            height: 50px;
+        }
+        .attraction_main_image{
+            position: relative;
+            left: 10%;
+            margin-top: 3%;
+        }
+        .attraction_information{
+            position: relative;
+            left: 17%;
+        }
+        .attraction_map{
+            position: relative;
+        }
+        .attraction_description , .attraction_poster{
+            border-radius: 10px;
+            border-style: solid;
+            border-color: #ddd;
+            border-width: 1px;
+            box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.43);
+            -moz-box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.43);
+            -webkit-box-shadow: 0px 6px 11px rgba(0, 0, 0, 0.43);
+            position: relative;
+            left: 11%;
+
+        }
+        .attraction_other_objects{
+            position: relative;
+        }
+        .attraction_other_objects h3{
+            position: relative;
+            left: 5%;
+        }
+        .restaurant_other_objects{
+            position: relative;
+            bottom: 302px;
+            text-align: center;
+        }
+        .cafe_other_objects{
+            position: relative;
+        }
+        .button_to_favorites{
+                width: 230px;
+                height: 40px;
+                color: white;
+                position: relative;
+                right: 7%;
+                margin-top: 5%;
+            font-size: 18px;
+            line-height: 50px;
+            text-align: center;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            margin-left: 52px;
+
+
+            background: #7ea8cc;
+            -webkit-box-shadow: 0px 7px 0px rgb(114, 152, 174);
+            -moz-box-shadow: 0px 7px 0px rgb(111, 144, 174);
+            box-shadow: 0px 7px 0px rgb(101, 116, 174);
+        }
+    /*----notebook section -- transport road minibus controller----*/
+    .transport{
+        position: relative;
+        left: 20%;
+    }
+    .transport-item a{
+        cursor: pointer;
+        font: 1.7em "Noto Serif",serif;
+        position: relative;
+        margin-top: 5%;
+
+    }
+
+
+    /*----notebook section -- transport road minibus controller----*/
+            .transport_road_minibus{
+                position: relative;
+                left: 20%;
+            }
+            .minibus_add{
+                position: relative;
+                top: 5%;
+            }
+    /*----notebook section --  transport road minibus  controller----*/
+
+/*----notebook section -- restaurant controller----*/
+        .restaurant h1{
+            font:3em 'Noto Serif', serif;
+            position: relative;
+            left: 31%;
+        }
+        .restaurant_site{
+            left: 33%;
+        }
+        .restaurant_carousel{
+            position: relative;
+            width: 27%;
+            left: 19%;
+        }
+        .restaurant_map{
+            bottom: 312px;
+        }
+        .restaurant_button{
+            position: relative;
+            left: 36%;
+            margin-top: 8%;
+        }
+        .restaurant_social_links{
+            position: relative;
+            left: 39%;
+        }
+       .restaurant_social_links ul li{
+            position: relative;
+            width: 6%;
+            float: left;
+       }
+       .grid .button{
+            position: relative;
+           margin-top: 15%;
+       }
+
+/*--------------modal window-----------------*/
+
+
+    .hero-unit{
+        position: fixed;
+        visibility: hidden;
+        -webkit-transform:translateX(-50%) translateY(-50%);
+        z-index: 2000;
+        top: 30%;
+        left: 30%;
+        width: 40%;
+        height: 27%;
+        box-shadow: 1px 1px 37px #000;
+        background-color: lightblue;
+        border: 7px black solid;
+    }
+    .md-content {
+        position: relative;
+        left: 22%;
+        bottom:63px;
+    }
+    .md-close{
+        position: relative;
+        left: 89%;
+    }
+    .hero-unit .md-content p{
+        position: relative;
+        right: 11%;
+    }
+    .hero-unit .md-content h3{
+        position: relative;
+        right: 19%;
+        text-align: center;
+    }
+
+    .overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        opacity: 0;
+        -webkit-transition:all 0.3s;
+        transition:all 0.3s;
+    }
+    .md-show {
+        visibility: visible;
+        perspective:300px;
+    }
+    .md-show ~ .md-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .overlay-show{
+        visibility: visible;
+        background-color: red;
+    }
+
+    /* Individual modal styles with animations/transitions */
+
+
+    .md-effect-1  {
+        -webkit-transform: scale(2.3);
+        -moz-transform: scale(2.3);
+        -ms-transform: scale(2.3);
+        transform: scale(2.3);
+        opacity: 0;
+        -webkit-transition: all 2.3s;
+        -moz-transition: all 2.3s;
+        transition: all 2.0s;
+    }
+
+    .md-show.md-effect-1 {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+
+/*-------------------------------------------*/
+}
+/* ----------------------------------- */
+@media (max-width:767px)  {
+    .head{
+        margin-top: 10%;
+    }
+    .head ul li h3{
+      font-size: 20px;
+	  font-family: 'asenine_cyrillicregular';
+  }
+
+}
